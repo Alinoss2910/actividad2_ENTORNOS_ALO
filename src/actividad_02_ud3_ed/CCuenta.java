@@ -7,7 +7,7 @@ package actividad_02_ud3_ed;
 
 /**
  * 
- * @author Ana
+ * @author Airam
  */
 public class CCuenta {
 
@@ -22,7 +22,10 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
-  
+  /**
+ * 
+ * Contructor sin parametros
+ */
     public CCuenta ()
     {
     }
@@ -59,7 +62,7 @@ public class CCuenta {
     
     /**
      * 
-     * @return saldo del saldo que tiene la cuenta
+     * @return Devuelve saldo del saldo que tiene la cuenta
      */
     
      public double estado ()
@@ -84,27 +87,42 @@ public class CCuenta {
             throw new Exception ("No se hay suficiente saldo");}
         setSaldo(saldo - cantidad);
     }
-    
+    /**
+     * 
+     * @return Devuelce el tipo de cuenta
+     */
     public String obtenerCuenta ()
     {
         return cuenta;
     }
-
+/**
+ * 
+ * @param cuenta Añade la cuenta al parametro
+ */
   
   public void setCuenta(String cuenta) {
     this.cuenta = cuenta;
   }
-
+/**
+ * 
+ * @param saldo Añade el saldo al parametro
+ */
   
   public void setSaldo(double saldo) {
     this.saldo = saldo;
   }
-
+/**
+ * 
+ * @return Devuelve el tipo de interes
+ */
  
   public double getTipoInterés() {
     return tipoInterés;
   }
-
+/**
+ * 
+ * @param tipoInterés Añade el tipo de interes al parametro
+ */
   
   public void setTipoInterés(double tipoInterés) {
     this.tipoInterés = tipoInterés;
