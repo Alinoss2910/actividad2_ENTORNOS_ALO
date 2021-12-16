@@ -11,7 +11,11 @@ package actividad_02_ud3_ed;
  */
 public class CCuenta {
 
-
+/**
+ * AQUÍ ESTAMOS DECLARANDO LAS VARIABLES
+ * @author Sergio
+ * @version 1.0.0
+ */
      
   protected String nombre;
     private String cuenta;
@@ -26,7 +30,7 @@ public class CCuenta {
     * 
     * @param nom Nombre del titular de la cuenta
     * @param cue Numero de cuenta
-    * @param sal Saldo en la cuenta
+    * @param sal Cantidad de dinero en la cuenta
     * @param tipo Tipo de cuenta
     */
     public CCuenta (String nom, String cue, double sal, double tipo)
@@ -38,18 +42,25 @@ public class CCuenta {
     }
   /**
    * 
-   * @param nom Nombre del propietario de la cuenta
+   * @param nom Nombre del titular de la cuenta
    */
     public void asignarNombre(String nom)
     {
         nombre=nom;
     }
-   
+   /**
+    * 
+    * @return nombre del titular de la cuenta 
+    */
     public String obtenerNombre()
     {
         return nombre;
     }
-
+    
+    /**
+     * 
+     * @return saldo del saldo que tiene la cuenta
+     */
     
      public double estado ()
     {
@@ -63,11 +74,7 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");}
         setSaldo(saldo + cantidad);
     }
-/**
- * 
- * @param cantidad no se puede ingresar una cantidad negatavia
- * @throws Exception 
- */
+
    
     public void retirar (double cantidad) throws Exception
     {
@@ -77,10 +84,6 @@ public class CCuenta {
             throw new Exception ("No se hay suficiente saldo");}
         setSaldo(saldo - cantidad);
     }
-/**
- * @param cantidad No se puede retirar cantidad negativa
- * 
- */
     
     public String obtenerCuenta ()
     {
