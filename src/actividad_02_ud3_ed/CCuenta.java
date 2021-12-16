@@ -53,7 +53,7 @@ public class CCuenta {
     }
    /**
     * 
-    * @return nombre del titular de la cuenta 
+    * @return  Devuelve nombre del titular de la cuenta 
     */
     public String obtenerNombre()
     {
@@ -62,14 +62,18 @@ public class CCuenta {
     
     /**
      * 
-     * @return Devuelve saldo del saldo que tiene la cuenta
+     * @return Devuelve saldo que tiene la cuenta
      */
     
      public double estado ()
     {
         return saldo;
     }
-
+/**
+ * 
+ * @param cantidad No se puede ingresar cantidad menor que cero
+ * @throws Exception 
+ */
     
     public void ingresar(double cantidad) throws Exception
     {
@@ -77,7 +81,11 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");}
         setSaldo(saldo + cantidad);
     }
-
+/**
+ * 
+ * @param cantidad No se puede retirar cantidad menor que cero
+ * @throws Exception 
+ */
    
     public void retirar (double cantidad) throws Exception
     {
